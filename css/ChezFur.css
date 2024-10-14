@@ -74,21 +74,59 @@ nav a:active {
     height: 80px;
 }
 
-ul {
+.menulist {
     list-style-type: none; 
 }
 
-li {
+.menulist li {
     font-size: 40px;
     font-family:'Brush Script MT', cursive;; 
 }
 
-dt {
+.menulist dt {
     font-weight: bold; 
 }
 
-dd {
+.menulist dd {
     font-style: italic;
+}
+
+nav ul {
+    list-style-type: none;  /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 5px;  /* Small space between links */
+    display: inline;
+        
+}
+
+nav ul li a {
+    padding: 10px;
+    background-color: #808080;  /* Background color */
+    color: white;  
+    text-align: center;  
+    font-size: 18px; 
+}
+
+nav ul li a:hover {
+    background-color: #45a049;  /* Hover effect */
+    font-size: 24px;
+    padding-right: 20px;
+}
+
+aside {
+    padding: 20px;  
+    border: 2px solid #4B0082;  
+    border-radius: 10px;  /* Round the corners */
+    background-color: black;
+    color: white;
+}
+
+.menu-heading, .menulist {
+    padding: 20px;  /* Add padding around the menu items area */
 }
 
 @media (min-width: 750px) {
@@ -105,4 +143,52 @@ dd {
         width: 180px;
         height: 180px;
     }
+
+    nav ul {
+        list-style-type: none;  /* Removes bullet points */
+        padding: 0;
+        margin: 0;
+    }
+    nav ul li {
+        margin-bottom: 10px; /* Vertical spacings */
+    }
+    
+    nav ul li a {
+        display: block;
+        background-color: #808080;  
+        color: white;  
+        width: 100px;
+        text-align: center;  
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    nav ul li a:hover {
+        background-color: #45a049;  /* Hover effect */
+        font-size: 24px;
+    }
+    
+    aside {
+        padding: 25px;  /* Extra padding for larger screens */
+    }
+    
+    .left {
+        width: 30%; 
+        float: left;
+        padding: 10px;  /* Adds padding inside the columns */
+        margin-right: 2%; 
+    }
+    
+    .right {
+        width: 65%;  /* Set width for right column (hero images) */
+        float: right;
+        margin-right: 2%;
+    }
+    
+    .column::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    
 }
